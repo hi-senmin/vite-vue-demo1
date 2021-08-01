@@ -19,7 +19,7 @@
 
   <p>See <code>README.md</code> for more information.</p>
 
-  <p>
+  <p class="content">
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
       Vite Docs
     </a>
@@ -51,7 +51,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 a {
   color: #42b983;
 }
@@ -66,5 +66,12 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
+}
+.content{
+  font-size: 24px;
+  a{
+    font-size: 22px;
+    color: red;
+  }
 }
 </style>
