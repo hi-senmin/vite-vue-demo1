@@ -3,24 +3,23 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
-import server from  '../utils/axios'
+import server from '../utils/server';
+
 export default defineComponent({
   name: 'axios',
-  setup(){
-      server
-        .get('/users/XPoet')
-        .then((res) => {
-          console.log('res: ', res)
-        })
-        .catch((err) => {
-          console.log('err: ', err)
-        })
+  setup() {
+    server
+      .get('/users/XPoet')
+      .then((res) => {
+        console.log('res: ', res);
+      })
+      .catch((err) => {
+        console.log('err: ', err);
+      });
   }
-})
+});
 </script>
 
-<style>
-
-</style>
+<style></style>

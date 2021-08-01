@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     port: 8081,
     open: true,
-    cors: true,
+    cors: true
 
     // proxy: {
     //   '/api': {
@@ -25,5 +25,4 @@ export default defineConfig({
     //   }
     // }
   }
-
 })

@@ -4,16 +4,18 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import HelloWorld from '../components/HelloWorld.vue'
+import { defineComponent } from 'vue';
+import HelloWorld from '../components/HelloWorld.vue';
+
 export default defineComponent({
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods: {
+    getTest() {}
   }
-})
+});
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

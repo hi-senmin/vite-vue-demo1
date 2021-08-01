@@ -1,14 +1,13 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
-import Home from '@/views/home.vue'
-import Vuex from '@/views/vuex.vue'
-
+import Home from '@/views/home.vue';
+import Vuex from '@/views/vuex.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: Home
   },
   {
     path: '/vuex',
@@ -18,12 +17,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/axios',
     name: 'Axios',
-    component: ()=> import('@/views/axios.vue')
+    component: () => import('@/views/axios.vue')
   }
-]
+];
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
-})
+  routes
+});
 
-export default router
+export default router;

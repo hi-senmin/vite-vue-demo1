@@ -5,10 +5,7 @@
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-      target="_blank"
-    >
+    <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">
       Vetur
     </a>
     or
@@ -20,9 +17,7 @@
   <p>See <code>README.md</code> for more information.</p>
 
   <p class="content">
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Docs </a>
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
@@ -35,7 +30,8 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -45,10 +41,10 @@ export default defineComponent({
     }
   },
   setup: () => {
-    const count = ref(0)
-    return { count }
+    const count = ref(0);
+    return { count };
   }
-})
+});
 </script>
 
 <style scoped lang="scss">
@@ -67,9 +63,9 @@ code {
   border-radius: 4px;
   color: #304455;
 }
-.content{
+.content {
   font-size: 24px;
-  a{
+  a {
     font-size: 22px;
     color: red;
   }
