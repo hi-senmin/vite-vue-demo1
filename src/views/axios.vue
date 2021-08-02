@@ -5,7 +5,7 @@
 <script>
 import { defineComponent } from 'vue';
 
-import server from '../utils/server.js';
+import server from '../utils/server';
 
 export default defineComponent({
   name: 'axios',
