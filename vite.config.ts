@@ -10,7 +10,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
-  base: '/',
+  base: './',
   server: {
     port: 8081,
     open: false,
