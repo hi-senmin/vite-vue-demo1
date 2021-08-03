@@ -1,5 +1,7 @@
 <template>
   <h3>axios</h3>
+  <p>name: {{ info.data.login }}</p>
+  <img :src="info.data.avatar_url" alt="" />
 </template>
 
 <script>
@@ -9,15 +11,26 @@ import server from '../utils/server';
 
 export default defineComponent({
   name: 'axios',
-  setup() {
-    server
-      .get('/users/XPoet')
-      .then((res) => {
-        console.log('res: ', res);
-      })
-      .catch((err) => {
-        console.log('err: ', err);
-      });
+  data() {
+    return {
+      info: {}
+    };
+  },
+  mounted() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      server
+        .get('/users/hi-senmin')
+        .then((res) => {
+          console.log('res: ', res);
+          this.info = res;
+        })
+        .catch((err) => {
+          console.log('err: ', err);
+        });
+    }
   }
 });
 </script>

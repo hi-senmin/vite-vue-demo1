@@ -3,12 +3,11 @@
 
   <p>
     Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
+    <router-link to="/vuex">vuex</router-link>
     +
-    <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">
-      Vetur
-    </a>
+    <router-link to="/test">test</router-link>
     or
+    <router-link to="/axios">axios</router-link>
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
     (if using
     <code>&lt;script setup&gt;</code>)
