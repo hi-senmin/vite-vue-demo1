@@ -1,7 +1,7 @@
 <template>
   <h3>axios</h3>
-  <p>name: {{ info.data.login }}</p>
-  <img :src="info.data.avatar_url" alt="" />
+  <p>name: {{ info.login }}</p>
+  <img :src="info.avatar_url" alt="" />
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default defineComponent({
         .get('/users/hi-senmin')
         .then((res) => {
           console.log('res: ', res);
-          this.info = res;
+          this.info = res?.data || {};
         })
         .catch((err) => {
           console.log('err: ', err);
