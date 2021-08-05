@@ -6,8 +6,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-
-import server from '../utils/server';
+import { getUsrInfo } from './modules';
 
 export default defineComponent({
   name: 'axios',
@@ -20,16 +19,8 @@ export default defineComponent({
     this.getData();
   },
   methods: {
-    getData() {
-      server
-        .get('/users/hi-senmin')
-        .then((res) => {
-          console.log('res: ', res);
-          this.info = res?.data || {};
-        })
-        .catch((err) => {
-          console.log('err: ', err);
-        });
+    async getData() {
+      getUsrInfo({ a: 1, b: 2 }, { toast: false });
     }
   }
 });

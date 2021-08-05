@@ -12,6 +12,9 @@ export default defineComponent({
   components: {
     HelloWorld
   },
+  mounted() {
+    console.log('测试测试测试测试测试测试测试测试1111');
+  },
   methods: {
     getTest() {}
   }

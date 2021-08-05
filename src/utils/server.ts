@@ -1,7 +1,8 @@
 import Axios from 'axios';
-import { ElMessage } from 'element-plus';
+import { ElMessage, ElLoading } from 'element-plus';
 
-const baseURL = 'https://api.github.com';
+const baseURL = 'https://www.test.com';
+let loadingInstance: any;
 
 const server = Axios.create({
   baseURL,
@@ -10,7 +11,7 @@ const server = Axios.create({
 
 server.interceptors.request.use(
   (config) => {
-    console.log('config', config);
+    loadingInstance = ElLoading.service();
     return config;
   },
   (error) => Promise.reject(error)
@@ -18,8 +19,11 @@ server.interceptors.request.use(
 
 server.interceptors.response.use(
   (response) => {
-    console.log('response', response);
-    return response;
+    loadingInstance.close();
+    if (response.status === 200) {
+      return response;
+    }
+    throw new Error(`请求异常 ${response}`);
   },
   (error) => {
     if (error.response && error.response.data) {
